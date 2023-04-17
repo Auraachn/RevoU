@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Us</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo"><a href="index.html"><img class="resize_logo" src="RevoU.png" alt=""></a></div>
+            <div>
+                <a class="navbar" href="index.html">Home</a>
+                <a class="navbar" href="profile.html">Our Profile</a>
+                <a class="navbar" href="">Achievement</a>
+                <a class="navbar active" href="msg_us.html">Message Us</a>
+            </div>
+        </div>
+        <hr>
+    </nav>
+
+    <section class="message_us">
+        <div class="main_container">
+            <h2>Message Us</h2>
+            <div class="main_msg">
+            <div>
+                <div>
+                    <form class="form" name="form" onsubmit="return validateForm()">
+                        <table>
+                          <tr>
+                            <td><label for="Nama">Nama</label></td>
+                            <td>:</td>
+                            <td><input type="text" name="full-name" placeholder="nama"></td>
+                          </tr>
+                          <tr>
+                            <td><label for="TTL">Tanggal Lahir</label></td>
+                            <td>:</td>
+                            <td><input type="date" name="birth-date"></td>
+                          </tr>
+                          <tr>
+                            <td><label for="JK">Jenis Kelamin</label></td>
+                            <td>:</td>
+                            <td>
+                              <input type="radio" name="JK" id="male" value="male">
+                              <label for="male">Male</label>
+                              <input type="radio" name="JK" id="female" value="female">
+                              <label for="female">Female</label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="10px"><label for="">Pesan</label></td>
+                            <td>:</td>
+                            <td rowspan="2"><textarea name="pesan" placeholder="masukkan pesan" cols="30" rows="10"></textarea></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td><input type="submit" value="Submit"></td>
+                          </tr>
+                        </table>     
+                      </form>
+                      
+                      <script>
+                        function validateForm() {
+                            var name = document.forms["form"]["full-name"].value;
+                            var date = document.forms["form"]["birth-date"].value;
+                            var gender = document.forms["form"]["JK"].value;
+                            var msg = document.forms["form"]["pesan"].value;
+                            
+                            console.log(name, date, gender, msg);
+                            document.getElementById("sender-nama").innerText = name;
+                            document.getElementById("sender-tgl").innerText = date;
+                            document.getElementById("sender-pesan").innerText = msg;
+                            
+                            return false;
+                          }
+                      </script>
+                      </div>
+                </div>
+                <div class="box">
+                    <script>
+                        function updateTime() {
+                            var now = new Date();
+                            var hours = now.getHours();
+                            var minutes = now.getMinutes();
+                            var seconds = now.getSeconds();
+                            var timeStr = hours + ":" + minutes + ":" + seconds;
+                            document.getElementById("sender-time").innerText = timeStr;
+                          }
+                          
+                          setInterval(updateTime, 1000);
+                    </script>
+                    <p>
+                        <b>Current Time :</b>
+                        <span id="sender-time"></span>
+                        <br><br>
+                        <b>Nama :</b>
+                        <span id="sender-nama"></span>
+                        <br>
+                        <b>Tanggal Lahir :</b>
+                        <span id="sender-tgl"></span>
+                        <br>
+                        <b>Pesan :</b>
+                        <span id="sender-pesan"></span>
+                    </p>
+                </div>
+            </div> 
+            </div>  
+        </div>
+    </section>
+    <br><br>
+</body>
+</html>
