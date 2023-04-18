@@ -1,0 +1,71 @@
+.profile_box{
+    border-radius: 20px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 1%, rgba(255,220,96,1) 57%);
+    padding: 30px;
+    padding-bottom: 50px;
+    overflow: auto;
+}
+
+.title{
+    font-size: 50px;
+}
+
+.title_2{
+    font-size: 30px;
+}
+
+.together{
+    color: rgba(255,220,96,1);
+    
+    background-color:black
+ }
+
+.explore{
+    display: inline-block;
+    font-size: 18px;
+    background-color: black;
+    border: 1px solid #ccc;
+    padding: 12px 12px 12px 12px;
+    width: 120px;
+    border-radius: 999px;
+    box-shadow:inset;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255,220,96,1); ;
+    box-shadow: 2px 2px  rgb(154, 148, 121);
+}
+
+.explore:hover{
+    background-color: rgba(255,220,96,1);
+    color: black;
+}
+
+.more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.iframe_vid {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; 
+  }
+  
+.responsive-iframe {
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
